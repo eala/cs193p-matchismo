@@ -23,6 +23,7 @@
 		289393D11704CBD900DB7BD2 /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 289393D01704CBD900DB7BD2 /* PlayingCardDeck.m */; };
 		289393D41705EA9300DB7BD2 /* CardGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 289393D31705EA9300DB7BD2 /* CardGameViewController.m */; };
 		36D24B231709D51300D1C4A3 /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D24B221709D51300D1C4A3 /* CardMatchingGame.m */; };
+		36ED39341A07A7B60060D6DB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36ED39331A07A7B60060D6DB /* Images.xcassets */; };
 		36EEB51E17221FDE00D42B2B /* cardBack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 36EEB51D17221FDE00D42B2B /* cardBack.jpg */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		289393D31705EA9300DB7BD2 /* CardGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardGameViewController.m; sourceTree = "<group>"; };
 		36D24B211709D51300D1C4A3 /* CardMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardMatchingGame.h; path = Model/CardMatchingGame.h; sourceTree = "<group>"; };
 		36D24B221709D51300D1C4A3 /* CardMatchingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardMatchingGame.m; path = Model/CardMatchingGame.m; sourceTree = "<group>"; };
+		36ED39331A07A7B60060D6DB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		36EEB51D17221FDE00D42B2B /* cardBack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cardBack.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +108,7 @@
 				289393B2170359B700DB7BD2 /* TCWAppDelegate.h */,
 				289393B3170359B700DB7BD2 /* TCWAppDelegate.m */,
 				289393BB170359B800DB7BD2 /* MainStoryboard.storyboard */,
+				36ED39331A07A7B60060D6DB /* Images.xcassets */,
 				289393AA170359B700DB7BD2 /* Supporting Files */,
 			);
 			path = matchismo;
@@ -197,6 +200,7 @@
 			files = (
 				289393AE170359B700DB7BD2 /* InfoPlist.strings in Resources */,
 				289393B6170359B700DB7BD2 /* Default.png in Resources */,
+				36ED39341A07A7B60060D6DB /* Images.xcassets in Resources */,
 				289393B8170359B700DB7BD2 /* Default@2x.png in Resources */,
 				289393BA170359B800DB7BD2 /* Default-568h@2x.png in Resources */,
 				289393BD170359B800DB7BD2 /* MainStoryboard.storyboard in Resources */,
@@ -303,6 +307,8 @@
 		289393C4170359B800DB7BD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "matchismo/matchismo-Prefix.pch";
 				INFOPLIST_FILE = "matchismo/matchismo-Info.plist";
@@ -314,6 +320,8 @@
 		289393C5170359B800DB7BD2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "matchismo/matchismo-Prefix.pch";
 				INFOPLIST_FILE = "matchismo/matchismo-Info.plist";

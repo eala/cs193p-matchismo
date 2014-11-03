@@ -13,9 +13,6 @@
 
 -(NSString *)contents
 {
-    /* old method without usind A for 1, J for 11, ...etc.
-    return [NSString stringWithFormat:@"%d%@", self.rank, self.suit];
-     */
     NSArray *rankStrings = [PlayingCard rankStrings];
     return [rankStrings[self.rank] stringByAppendingString:self.suit];
 }

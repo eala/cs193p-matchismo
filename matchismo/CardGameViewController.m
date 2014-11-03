@@ -18,9 +18,18 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *gameModeControl;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *operationLabel;
+
+@property (strong, nonatomic) Deck *deck;
 @end
 
 @implementation CardGameViewController
+
+-(Deck *)deck{
+    if(_deck){
+        _deck = [[PlayingCardDeck alloc]init];
+    }
+    return _deck;
+}
 
 - (IBAction)changeMode:(id)sender {
 	self.game.nGameMode = self.gameModeControl.selectedSegmentIndex;
@@ -49,10 +58,10 @@
         cardButton.selected = card.isFaceUp;
         if (!cardButton.selected) {
             [cardButton setTitle:@"" forState:UIControlStateNormal];
-            [cardButton setBackgroundImage:[UIImage imageNamed:@"cardBack.jpg"] forState:UIControlStateNormal];
+            [cardButton setBackgroundImage:[UIImage imageNamed:@"stanford"] forState:UIControlStateNormal];
         }else{
             [cardButton setTitle:card.contents forState:UIControlStateNormal];
-            [cardButton setBackgroundImage:nil forState:UIControlStateNormal];
+            [cardButton setBackgroundImage:[UIImage imageNamed:@"blankCard"] forState:UIControlStateNormal];
         }
         cardButton.enabled = !card.isUnplayable;
         cardButton.alpha = card.isUnplayable ? 0.3 : 1.0;

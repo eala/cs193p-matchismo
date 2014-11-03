@@ -29,6 +29,10 @@
     }
 }
 
+-(void)addCard:(Card *)card{
+    [self addCard:card atTop:NO];
+}
+
 -(Card *)drawRandomCard
 {
 

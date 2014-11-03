@@ -66,7 +66,8 @@
 
 -(void)flipCardAtIndex:(NSUInteger)index
 {
-    self.nFlipCount++;
+    // it will be a problem when there are no cards to draw
+    //self.nFlipCount++;
     self.bStartFliped = YES;
     Card* card = [self cardAtIndex:index];
     
@@ -91,6 +92,7 @@
             self.score -= FLIP_COST;
         }
         card.faceUp = !card.isFaceUp;
+        self.nFlipCount++;
     }
 }
 @end

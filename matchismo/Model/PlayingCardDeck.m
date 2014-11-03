@@ -11,7 +11,7 @@
 
 @implementation PlayingCardDeck
 
--(id)init
+-(instancetype)init
 {
     self = [super init];
     if (self) {
@@ -20,7 +20,7 @@
 				PlayingCard *card = [[PlayingCard alloc] init];
                 card.rank = rank;
                 card.suit = suit;
-                [self addCard:card atTop:YES];
+                [self addCard:card];
             }
         }
     }
