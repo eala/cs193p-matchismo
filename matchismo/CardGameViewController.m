@@ -12,23 +12,19 @@
 
 @interface CardGameViewController ()
 
-@property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
 @property (strong, nonatomic) CardMatchingGame *game;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
+
 @property (weak, nonatomic) IBOutlet UISegmentedControl *gameModeControl;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *operationLabel;
 
-@property (strong, nonatomic) Deck *deck;
 @end
 
 @implementation CardGameViewController
 
--(Deck *)deck{
-    if(_deck){
-        _deck = [[PlayingCardDeck alloc]init];
-    }
-    return _deck;
+-(Deck *)createDeck{
+    return [[PlayingCardDeck alloc] init];
 }
 
 - (IBAction)changeMode:(id)sender {
@@ -39,7 +35,7 @@
 {
     if (!_game) {
         _game = [[CardMatchingGame alloc] initWithCardCount:self.cardButtons.count
-                                                  usingDeck:[[PlayingCardDeck alloc]init]];
+                                                  usingDeck:[self createDeck]];
     }
     return _game;
 }
@@ -50,30 +46,28 @@
     [self updateUI];
 }
 
+-(NSString *)titleForCard: (Card *)card{
+    return card.isChosen? card.contents: @"";
+}
+
+-(UIImage *)backgroundImageForCard: (Card *)card{
+    return [UIImage imageNamed: card.isChosen? @"cardfront" : @"cardback"];
+}
+
 -(void)updateUI
 {
     for (UIButton *cardButton in self.cardButtons) {
         Card* card=[self.game cardAtIndex:[self.cardButtons indexOfObject:cardButton]];
         
-        cardButton.selected = card.isFaceUp;
-        if (!cardButton.selected) {
-            [cardButton setTitle:@"" forState:UIControlStateNormal];
-            [cardButton setBackgroundImage:[UIImage imageNamed:@"stanford"] forState:UIControlStateNormal];
-        }else{
-            [cardButton setTitle:card.contents forState:UIControlStateNormal];
-            [cardButton setBackgroundImage:[UIImage imageNamed:@"blankCard"] forState:UIControlStateNormal];
-        }
-        cardButton.enabled = !card.isUnplayable;
-        cardButton.alpha = card.isUnplayable ? 0.3 : 1.0;
+        [cardButton setTitle:[self titleForCard:card] forState:UIControlStateNormal];
+        [cardButton setBackgroundImage:[self backgroundImageForCard:card] forState:UIControlStateNormal];
+        cardButton.enabled = !card.isMatched;
+        self.scoreLabel.text = [NSString stringWithFormat:@"Score: %ld", self.game.score] ;
     }
-    self.scoreLabel.text = [NSString stringWithFormat:@"Score: %d", self.game.score];
-    self.operationLabel.text = [NSString stringWithString:self.game.flipResult];
-    self.gameModeControl.hidden = self.game.bStartFliped;
-    self.flipsLabel.text = [NSString stringWithFormat:@"%d",self.game.nFlipCount];
 }
 
-- (IBAction)flipCard:(UIButton *)sender {
-    [self.game flipCardAtIndex:[self.cardButtons indexOfObject:sender]];
+- (IBAction)touchCardButton:(UIButton *)sender {
+    [self.game chooseCardAtIndex:[self.cardButtons indexOfObject:sender]];
     [self updateUI];
 }
 

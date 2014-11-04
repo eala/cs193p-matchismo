@@ -56,10 +56,10 @@
 {
     int score = 0;
     if (otherCards.count==1) {
-        PlayingCard *card = [otherCards lastObject];
-        if ([card.suit isEqualToString:self.suit]) {
+        PlayingCard *otherCard = [otherCards firstObject];
+        if ([otherCard.suit isEqualToString:self.suit]) {
             score = 1;
-        }else if (card.rank == self.rank) {
+        }else if (otherCard.rank == self.rank) {
             score =4;
         }
     }

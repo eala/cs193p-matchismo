@@ -8,19 +8,21 @@
 
 #import <Foundation/Foundation.h>
 #import "Deck.h"
+#import "Card.h"
 
 @interface CardMatchingGame : NSObject
 
--(id) initWithCardCount:(NSUInteger)cardCount
+-(instancetype) initWithCardCount:(NSUInteger)cardCount
               usingDeck:(Deck *)deck;
 
 
--(void) flipCardAtIndex:(NSUInteger)index;
+-(void) chooseCardAtIndex:(NSUInteger)index;
 
 -(Card *) cardAtIndex: (NSUInteger)index;
 
+@property (nonatomic, readonly) NSInteger score;
 @property (nonatomic) bool bStartFliped;
-@property (nonatomic, readonly) int score;
+
 @property (nonatomic, readonly, strong) NSString *flipResult;
 @property (nonatomic, readonly) int nFlipCount;
 @property (nonatomic) NSInteger nGameMode;	// fixme later, use other type, like dictionary to switch the modes, 0 as the default 2-card-match
