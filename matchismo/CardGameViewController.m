@@ -72,8 +72,19 @@
 }
 
 - (IBAction)deal:(UIButton *)sender {
-    self.game = nil;
-    [self updateUI];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning"
+                                                    message:@"Are you sure you want to deal the game?"
+                                                   delegate:self
+                                          cancelButtonTitle:@"Cancel"
+                                          otherButtonTitles:@"YES", nil];
+    [alert show];
+}
+
+-(void)alertView: (UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (1 == buttonIndex) {
+        self.game = nil;
+        [self updateUI];
+    }
 }
 
 @end
