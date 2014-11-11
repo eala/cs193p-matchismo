@@ -13,6 +13,7 @@
 @property (nonatomic, readwrite) NSInteger score;
 @property (strong, nonatomic) NSMutableArray *cards;    // Of Cards
 @property (strong, nonatomic) NSString *flipResult;
+@property (strong, nonatomic) NSMutableArray *chosenCards;
 
 @property (nonatomic) int nFlipCount;
 @end
@@ -25,6 +26,13 @@
     return _cards;
 }
 
+-(NSMutableArray *)chosenCards{
+    if (!_chosenCards) {
+        _chosenCards = [[NSMutableArray alloc] init];
+    }
+    return _chosenCards;
+}
+
 -(NSString *)flipResult
 {
     if (!_flipResult) {
@@ -32,13 +40,6 @@
     }
     return _flipResult;
 }
-
--(void)setNGameMode:(NSInteger)nGameMode
-{
-	_nGameMode = nGameMode;
-    //NSLog(@"Current Game Mode:%d\n", self.nGameMode);
-}
-
 
 -(instancetype) initWithCardCount:(NSUInteger)count
                         usingDeck:(Deck *)deck
@@ -69,32 +70,41 @@ static const int COST_TO_CHOOSE = 1;
 
 -(void)chooseCardAtIndex:(NSUInteger)index
 {
-    // it will be a problem when there are no cards to draw
-    //self.nFlipCount++;
     Card* card = [self cardAtIndex:index];
     
     if (!card.isMatched) {
-        if (card.isChosen) {
+        if (card.isChosen) { // re-select
             card.chosen = NO;
+            [self.chosenCards removeObject:card];
         }else{
-            for (Card *otherCard in self.cards) {
-                if (otherCard.isChosen && !otherCard.isMatched) {
-                    int matchedScore = [card match: @[otherCard]];
-                    if (matchedScore) {
-                        self.score +=  matchedScore * MATCH_BOUNS;
+            if ( self.gameMode == self.chosenCards.count){
+                // it means that this card is the last matching one
+                int matchedScore = [card match: self.chosenCards];
+                if (matchedScore > 0) {
+                    self.score +=  matchedScore * MATCH_BOUNS;
+                    for (Card *otherCard in self.chosenCards){
                         otherCard.matched = YES;
                         card.matched = YES;
-                        self.flipResult = [NSString stringWithFormat:@"Matched %@ & %@ for 4 points", card.contents, otherCard.contents];
-                    }else{
-                        otherCard.chosen = NO;
-                        self.score -= MISMATCH_PENALITY;
-                        self.flipResult = [NSString stringWithFormat:@"%@ & %@ don't match! 2 point penality!", card.contents, otherCard.contents];
+                        otherCard.chosen = YES;  // in fact, it should have been done
                     }
-                    break;
+                    [self.chosenCards removeAllObjects];
+                }else{
+                    // reset chosen cards
+                    for (Card *otherCard in self.chosenCards){
+                        otherCard.chosen = NO;
+                    }
+                    [self.chosenCards removeAllObjects];
+                    self.score -= MISMATCH_PENALITY;
+                    
+                    [self.chosenCards addObject:card];
                 }
+                card.chosen = YES;
+            }else{
+                // general case, not arrive checking point
+                self.score -= COST_TO_CHOOSE;
+                card.chosen = YES;
+                [self.chosenCards addObject:card];
             }
-            self.score -= COST_TO_CHOOSE;
-            card.chosen = YES;
         }
     }
 }

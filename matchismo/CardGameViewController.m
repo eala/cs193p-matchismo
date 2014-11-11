@@ -15,7 +15,7 @@
 @property (strong, nonatomic) CardMatchingGame *game;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 
-@property (weak, nonatomic) IBOutlet UISegmentedControl *gameModeControl;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *gameModeControl;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *operationLabel;
 
@@ -27,8 +27,9 @@
     return [[PlayingCardDeck alloc] init];
 }
 
-- (IBAction)changeMode:(id)sender {
-	self.game.nGameMode = self.gameModeControl.selectedSegmentIndex;
+- (IBAction)changeCardMatchingMode:(UISegmentedControl *)sender
+{
+    self.game.gameMode = sender.selectedSegmentIndex + 1;
 }
 
 -(CardMatchingGame *)game
@@ -36,6 +37,7 @@
     if (!_game) {
         _game = [[CardMatchingGame alloc] initWithCardCount:self.cardButtons.count
                                                   usingDeck:[self createDeck]];
+        _game.gameMode = self.gameModeControl.selectedSegmentIndex + 1;
     }
     return _game;
 }
@@ -62,11 +64,13 @@
         [cardButton setTitle:[self titleForCard:card] forState:UIControlStateNormal];
         [cardButton setBackgroundImage:[self backgroundImageForCard:card] forState:UIControlStateNormal];
         cardButton.enabled = !card.isMatched;
-        self.scoreLabel.text = [NSString stringWithFormat:@"Score: %ld", self.game.score] ;
     }
+    
+    self.scoreLabel.text = [NSString stringWithFormat:@"Score: %ld", self.game.score];
 }
 
 - (IBAction)touchCardButton:(UIButton *)sender {
+    self.gameModeControl.enabled = NO;
     [self.game chooseCardAtIndex:[self.cardButtons indexOfObject:sender]];
     [self updateUI];
 }
@@ -83,6 +87,7 @@
 -(void)alertView: (UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (1 == buttonIndex) {
         self.game = nil;
+        self.gameModeControl.enabled = YES;
         [self updateUI];
     }
 }

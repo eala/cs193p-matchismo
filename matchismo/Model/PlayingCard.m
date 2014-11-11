@@ -62,6 +62,17 @@
         }else if (otherCard.rank == self.rank) {
             score =4;
         }
+    }else{
+        for (size_t i=0; i< otherCards.count-1; ++i) {
+            PlayingCard *matchedCard = otherCards[i];
+            score += [self match:@[matchedCard]];
+            for (size_t j=i+1; j< otherCards.count; ++j) {
+                PlayingCard *matchingCard = otherCards[j];
+                score += [matchedCard match:@[matchingCard]];
+            }
+        }
+        score += [self match:@[otherCards[otherCards.count-1]]];
+        // missing one in i to otherCards.count-1
     }
     return score;
 }

@@ -25,5 +25,5 @@
 
 @property (nonatomic, readonly, strong) NSString *flipResult;
 @property (nonatomic, readonly) int nFlipCount;
-@property (nonatomic) NSInteger nGameMode;	// fixme later, use other type, like dictionary to switch the modes, 0 as the default 2-card-match
+@property (nonatomic) NSInteger gameMode;
 @end
