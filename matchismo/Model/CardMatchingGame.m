@@ -72,6 +72,8 @@ static const int COST_TO_CHOOSE = 1;
 {
     Card* card = [self cardAtIndex:index];
     
+    card.lastMatchedResult = [NSString stringWithFormat:@"%@", card.contents];
+    
     if (!card.isMatched) {
         if (card.isChosen) { // re-select
             card.chosen = NO;
@@ -107,5 +109,6 @@ static const int COST_TO_CHOOSE = 1;
             }
         }
     }
+    self.flipResult = [NSString stringWithFormat:@"%@", card.lastMatchedResult];
 }
 @end

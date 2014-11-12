@@ -67,6 +67,7 @@
     }
     
     self.scoreLabel.text = [NSString stringWithFormat:@"Score: %ld", self.game.score];
+    self.operationLabel.text = [NSString stringWithFormat:@"%@", self.game.flipResult];
 }
 
 - (IBAction)touchCardButton:(UIButton *)sender {
