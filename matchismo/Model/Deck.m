@@ -33,6 +33,10 @@
     [self addCard:card atTop:NO];
 }
 
+-(NSInteger)cardCount{
+    return [self.cards count];
+}
+
 -(Card *)drawRandomCard
 {
 

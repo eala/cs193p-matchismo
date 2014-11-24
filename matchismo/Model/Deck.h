@@ -15,5 +15,5 @@
 -(void) addCard: (Card *)card;
 
 -(Card *)drawRandomCard;
-
+-(NSInteger)cardCount;
 @end
