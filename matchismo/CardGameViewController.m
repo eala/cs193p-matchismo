@@ -7,7 +7,6 @@
 //
 
 #import "CardGameViewController.h"
-#import "PlayingCardDeck.h"
 #import "CardMatchingGame.h"
 
 @interface CardGameViewController ()
@@ -24,7 +23,11 @@
 @implementation CardGameViewController
 
 -(Deck *)createDeck{
-    return [[PlayingCardDeck alloc] init];
+    return nil;
+}
+
+-(void)setGameMode:(NSInteger)mode{
+    self.game.gameMode = mode;
 }
 
 - (IBAction)changeCardMatchingMode:(UISegmentedControl *)sender
