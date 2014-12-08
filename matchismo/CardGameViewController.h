@@ -9,11 +9,15 @@
 
 #import <UIKit/UIKit.h>
 #import "Deck.h"
+#import "CardMatchingGame.h"
 
 @interface CardGameViewController : UIViewController
 
+@property (strong, nonatomic) CardMatchingGame *game;
+
 // public API
 -(Deck *)createDeck;
--(void)setGameMode: (NSInteger)mode;
+-(NSUInteger)getGameMode;
+
 // protected
 @end

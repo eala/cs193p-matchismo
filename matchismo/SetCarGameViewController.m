@@ -7,9 +7,7 @@
 //
 
 #import "SetCarGameViewController.h"
-
-// remove later
-#import "PlayingCardDeck.h"
+#import "SetCardDeck.h"
 
 @interface SetCarGameViewController ()
 
@@ -28,8 +26,11 @@
 }
 
 -(Deck *)createDeck{
-    [self setGameMode:3];
-    return [[PlayingCardDeck alloc] init];
+    return [[SetCardDeck alloc] init];
+}
+
+-(NSUInteger)getGameMode{
+    return 3;
 }
 
 /*

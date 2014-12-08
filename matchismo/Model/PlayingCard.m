@@ -11,17 +11,33 @@
 @implementation PlayingCard
 @synthesize suit = _suit;
 
+#pragma mark - SETTERS & GETTERS
 -(NSString *)contents
 {
     NSArray *rankStrings = [PlayingCard rankStrings];
     return [rankStrings[self.rank] stringByAppendingString:self.suit];
 }
 
+#pragma mark suit
 + (NSArray *)validSuits
 {
     return @[@"♥", @"♦", @"♠", @"♣"];
 }
 
+-(void)setSuit:(NSString *)suit
+{
+    if ([ [PlayingCard validSuits] containsObject:suit]) {
+        _suit = suit;
+    }
+}
+
+// important initialization, you can return init value here
+-(NSString *)suit
+{
+    return _suit ? _suit : @"?";
+}
+
+#pragma mark rank
 +(NSArray *)rankStrings
 {
     return @[@"?", @"A", @"2", @"3",@"4", @"5", @"6", @"7", @"8", @"9", @"10", @"J", @"Q", @"K"];
@@ -32,21 +48,9 @@
     return [self rankStrings].count-1;
 }
 
--(void)setSuit:(NSString *)suit
-{
-   // _suit = suit;
-    if ([ [PlayingCard validSuits] containsObject:suit]) {
-        _suit = suit;
-    }
-}
-
--(NSString *)suit
-{
-    return _suit ? _suit : @"?";
-}
-
 -(void)setRank:(NSUInteger)rank
 {
+    // you could not use self since maxRank is static function
     if (rank <= [PlayingCard maxRank]) {
         _rank = rank;
     }

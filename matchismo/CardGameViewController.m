@@ -7,14 +7,13 @@
 //
 
 #import "CardGameViewController.h"
-#import "CardMatchingGame.h"
+
 
 @interface CardGameViewController ()
 
-@property (strong, nonatomic) CardMatchingGame *game;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 
-@property (strong, nonatomic) IBOutlet UISegmentedControl *gameModeControl;
+//@property (strong, nonatomic) IBOutlet UISegmentedControl *gameModeControl;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *operationLabel;
 
@@ -26,21 +25,17 @@
     return nil;
 }
 
--(void)setGameMode:(NSInteger)mode{
-    self.game.gameMode = mode;
+-(NSUInteger)getGameMode{
+    return 0;
 }
 
-- (IBAction)changeCardMatchingMode:(UISegmentedControl *)sender
-{
-    self.game.gameMode = sender.selectedSegmentIndex + 1;
-}
 
 -(CardMatchingGame *)game
 {
     if (!_game) {
         _game = [[CardMatchingGame alloc] initWithCardCount:self.cardButtons.count
                                                   usingDeck:[self createDeck]];
-        _game.gameMode = self.gameModeControl.selectedSegmentIndex + 1;
+        _game.gameMode = [self getGameMode];
     }
     return _game;
 }
@@ -74,7 +69,7 @@
 }
 
 - (IBAction)touchCardButton:(UIButton *)sender {
-    self.gameModeControl.enabled = NO;
+    //self.gameModeControl.enabled = NO;
     [self.game chooseCardAtIndex:[self.cardButtons indexOfObject:sender]];
     [self updateUI];
 }
@@ -91,7 +86,7 @@
 -(void)alertView: (UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (1 == buttonIndex) {
         self.game = nil;
-        self.gameModeControl.enabled = YES;
+        //self.gameModeControl.enabled = YES;
         [self updateUI];
     }
 }

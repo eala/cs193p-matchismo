@@ -27,7 +27,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchCardButton:" destination="2" eventType="touchUpInside" id="zeB-V6-szi"/>
+                                    <action selector="touchCardButton:" destination="lHo-om-YYH" eventType="touchUpInside" id="ae2-P1-v7c"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dRP-sQ-oSa">
@@ -43,7 +43,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchCardButton:" destination="2" eventType="touchUpInside" id="hDK-34-Rrm"/>
+                                    <action selector="touchCardButton:" destination="lHo-om-YYH" eventType="touchUpInside" id="tfn-25-jNg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uzS-SD-uSj">
@@ -59,7 +59,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchCardButton:" destination="2" eventType="touchUpInside" id="2rD-wp-Lez"/>
+                                    <action selector="touchCardButton:" destination="lHo-om-YYH" eventType="touchUpInside" id="zdV-fH-2Be"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="n3B-H0-naM">
@@ -75,7 +75,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchCardButton:" destination="2" eventType="touchUpInside" id="OBQ-Wd-w0h"/>
+                                    <action selector="touchCardButton:" destination="lHo-om-YYH" eventType="touchUpInside" id="s9e-Ti-a57"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NHT-dz-xDh">
@@ -91,7 +91,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchCardButton:" destination="2" eventType="touchUpInside" id="LM3-Lf-pzp"/>
+                                    <action selector="touchCardButton:" destination="lHo-om-YYH" eventType="touchUpInside" id="UuH-Y8-yfl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vh0-k6-Cow">
@@ -107,7 +107,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchCardButton:" destination="2" eventType="touchUpInside" id="oit-ke-TfQ"/>
+                                    <action selector="touchCardButton:" destination="lHo-om-YYH" eventType="touchUpInside" id="KhT-ea-bki"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cHk-rX-rLe">
@@ -123,7 +123,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchCardButton:" destination="2" eventType="touchUpInside" id="LuY-gW-HnK"/>
+                                    <action selector="touchCardButton:" destination="lHo-om-YYH" eventType="touchUpInside" id="MTV-m7-8rQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hCD-Qu-JoV">
@@ -139,7 +139,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchCardButton:" destination="2" eventType="touchUpInside" id="rKD-oG-0Ey"/>
+                                    <action selector="touchCardButton:" destination="lHo-om-YYH" eventType="touchUpInside" id="4mb-jC-x97"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QHp-Df-ppb">
@@ -155,7 +155,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchCardButton:" destination="2" eventType="touchUpInside" id="X3c-us-enV"/>
+                                    <action selector="touchCardButton:" destination="lHo-om-YYH" eventType="touchUpInside" id="URB-8g-QPc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PJC-kq-nTB">
@@ -171,7 +171,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchCardButton:" destination="2" eventType="touchUpInside" id="vZS-zT-oWu"/>
+                                    <action selector="touchCardButton:" destination="lHo-om-YYH" eventType="touchUpInside" id="YfG-gR-lk3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AJb-Z7-vBL">
@@ -187,7 +187,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchCardButton:" destination="2" eventType="touchUpInside" id="UsW-Bu-8vA"/>
+                                    <action selector="touchCardButton:" destination="lHo-om-YYH" eventType="touchUpInside" id="hHx-Sk-8ls"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="f4k-YP-JYn">
@@ -203,7 +203,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchCardButton:" destination="2" eventType="touchUpInside" id="ydg-U9-oMg"/>
+                                    <action selector="touchCardButton:" destination="lHo-om-YYH" eventType="touchUpInside" id="mkC-ar-63K"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LxA-Lo-Yab">
@@ -219,7 +219,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchCardButton:" destination="2" eventType="touchUpInside" id="Mcu-Eb-f9K"/>
+                                    <action selector="touchCardButton:" destination="lHo-om-YYH" eventType="touchUpInside" id="Ivx-9U-Eua"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7sa-c3-jov">
@@ -235,7 +235,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchCardButton:" destination="2" eventType="touchUpInside" id="wAH-Qh-Lqf"/>
+                                    <action selector="touchCardButton:" destination="lHo-om-YYH" eventType="touchUpInside" id="oyR-jY-5em"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hD4-jG-ax0">
@@ -251,7 +251,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchCardButton:" destination="2" eventType="touchUpInside" id="J14-dN-jdb"/>
+                                    <action selector="touchCardButton:" destination="lHo-om-YYH" eventType="touchUpInside" id="cGn-Zu-fqc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7mA-Qb-1YO">
@@ -267,7 +267,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchCardButton:" destination="2" eventType="touchUpInside" id="kDW-wv-T2I"/>
+                                    <action selector="touchCardButton:" destination="lHo-om-YYH" eventType="touchUpInside" id="fvR-0W-KqS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3GU-mq-jTG">
@@ -283,7 +283,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchCardButton:" destination="2" eventType="touchUpInside" id="psF-Wi-vua"/>
+                                    <action selector="touchCardButton:" destination="lHo-om-YYH" eventType="touchUpInside" id="8TB-Cz-oe0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ap5-qS-4bk">
@@ -299,7 +299,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchCardButton:" destination="2" eventType="touchUpInside" id="Hhi-2X-WCE"/>
+                                    <action selector="touchCardButton:" destination="lHo-om-YYH" eventType="touchUpInside" id="68h-QX-0wQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3zm-ys-jgC">
@@ -315,7 +315,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchCardButton:" destination="2" eventType="touchUpInside" id="qoh-0B-LSr"/>
+                                    <action selector="touchCardButton:" destination="lHo-om-YYH" eventType="touchUpInside" id="97a-pQ-9bD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="r1y-aC-m4c">
@@ -331,7 +331,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchCardButton:" destination="2" eventType="touchUpInside" id="Day-DX-sI6"/>
+                                    <action selector="touchCardButton:" destination="lHo-om-YYH" eventType="touchUpInside" id="J9q-6c-pvs"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Bk1-E7-h9I">
@@ -347,7 +347,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchCardButton:" destination="2" eventType="touchUpInside" id="9a6-1l-SuL"/>
+                                    <action selector="touchCardButton:" destination="lHo-om-YYH" eventType="touchUpInside" id="ojf-48-bNJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="v5z-9w-qec">
@@ -363,7 +363,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchCardButton:" destination="2" eventType="touchUpInside" id="ULR-JX-UMu"/>
+                                    <action selector="touchCardButton:" destination="lHo-om-YYH" eventType="touchUpInside" id="pJB-7n-oTY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oRM-Up-Kp9">
@@ -379,7 +379,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchCardButton:" destination="2" eventType="touchUpInside" id="Xd7-Aj-zTa"/>
+                                    <action selector="touchCardButton:" destination="lHo-om-YYH" eventType="touchUpInside" id="2yC-j8-oYh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sck-qh-7gw">
@@ -395,113 +395,43 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchCardButton:" destination="2" eventType="touchUpInside" id="XEH-zC-r8t"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WPa-9O-BGE">
-                                <rect key="frame" x="16" y="288" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="2" eventType="touchUpInside" id="cP4-qz-3Ij"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1h2-op-hVO">
-                                <rect key="frame" x="64" y="288" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="2" eventType="touchUpInside" id="EX5-PV-g88"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oNA-4H-Z1n">
-                                <rect key="frame" x="116" y="288" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="2" eventType="touchUpInside" id="JLf-D9-Bdg"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zl2-X9-6hb">
-                                <rect key="frame" x="164" y="288" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="2" eventType="touchUpInside" id="iHw-8d-jPq"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vd8-7L-cxb">
-                                <rect key="frame" x="216" y="288" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="2" eventType="touchUpInside" id="egU-AD-PfW"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LH8-PL-tkl">
-                                <rect key="frame" x="264" y="288" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="2" eventType="touchUpInside" id="FHo-Jr-bz5"/>
+                                    <action selector="touchCardButton:" destination="lHo-om-YYH" eventType="touchUpInside" id="5AC-Ee-a48"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Set Game" id="uwL-jO-mES"/>
+                    <connections>
+                        <outletCollection property="cardButtons" destination="cky-Gp-484" id="TbU-4J-gJT"/>
+                        <outletCollection property="cardButtons" destination="dRP-sQ-oSa" id="DNu-wK-UMv"/>
+                        <outletCollection property="cardButtons" destination="uzS-SD-uSj" id="uY8-h1-gcV"/>
+                        <outletCollection property="cardButtons" destination="n3B-H0-naM" id="Qn4-YG-KlK"/>
+                        <outletCollection property="cardButtons" destination="NHT-dz-xDh" id="8Vw-d3-7dU"/>
+                        <outletCollection property="cardButtons" destination="vh0-k6-Cow" id="EaF-hX-zdz"/>
+                        <outletCollection property="cardButtons" destination="cHk-rX-rLe" id="vpL-PV-0hu"/>
+                        <outletCollection property="cardButtons" destination="hCD-Qu-JoV" id="qVv-2F-45m"/>
+                        <outletCollection property="cardButtons" destination="QHp-Df-ppb" id="Bpg-an-cfq"/>
+                        <outletCollection property="cardButtons" destination="PJC-kq-nTB" id="1fm-GX-bBF"/>
+                        <outletCollection property="cardButtons" destination="AJb-Z7-vBL" id="c6m-7A-KC0"/>
+                        <outletCollection property="cardButtons" destination="f4k-YP-JYn" id="Itd-WB-DRM"/>
+                        <outletCollection property="cardButtons" destination="LxA-Lo-Yab" id="gwQ-xB-cLv"/>
+                        <outletCollection property="cardButtons" destination="7sa-c3-jov" id="NVZ-zc-3T9"/>
+                        <outletCollection property="cardButtons" destination="hD4-jG-ax0" id="viR-cG-Mn9"/>
+                        <outletCollection property="cardButtons" destination="7mA-Qb-1YO" id="OVs-xo-8Oz"/>
+                        <outletCollection property="cardButtons" destination="3GU-mq-jTG" id="7Aj-Dh-iuk"/>
+                        <outletCollection property="cardButtons" destination="ap5-qS-4bk" id="7Lr-nC-TUT"/>
+                        <outletCollection property="cardButtons" destination="3zm-ys-jgC" id="jeb-s5-MaC"/>
+                        <outletCollection property="cardButtons" destination="r1y-aC-m4c" id="IWw-hF-RYR"/>
+                        <outletCollection property="cardButtons" destination="Bk1-E7-h9I" id="BMG-34-sH1"/>
+                        <outletCollection property="cardButtons" destination="v5z-9w-qec" id="ZGG-bP-RUj"/>
+                        <outletCollection property="cardButtons" destination="oRM-Up-Kp9" id="Flb-dv-0FN"/>
+                        <outletCollection property="cardButtons" destination="sck-qh-7gw" id="SSa-HN-Co6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SlI-7j-Tpi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="349" y="475"/>
+            <point key="canvasLocation" x="366" y="368"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="bwn-xV-6EL">
@@ -530,18 +460,6 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="WTb-Fs-bHE">
-                                <rect key="frame" x="20" y="355" width="280" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="2-match"/>
-                                    <segment title="3-match"/>
-                                    <segment title="4-match"/>
-                                </segments>
-                                <connections>
-                                    <action selector="changeCardMatchingMode:" destination="2" eventType="valueChanged" id="ztb-JL-DRm"/>
-                                </connections>
-                            </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZvQ-b1-yMZ">
                                 <rect key="frame" x="132" y="406" width="56" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1056,7 +974,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Playing Card" id="4uY-No-axY"/>
                     <connections>
-                        <outlet property="gameModeControl" destination="WTb-Fs-bHE" id="KYM-IY-tX2"/>
                         <outlet property="operationLabel" destination="mRZ-82-jpm" id="AMc-4g-wdj"/>
                         <outlet property="scoreLabel" destination="WaZ-U3-2RZ" id="r8W-sy-HCf"/>
                         <outletCollection property="cardButtons" destination="usd-xO-tYm" id="1be-y6-mvA"/>
@@ -1093,7 +1010,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="343" y="-158"/>
+            <point key="canvasLocation" x="366" y="-284"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

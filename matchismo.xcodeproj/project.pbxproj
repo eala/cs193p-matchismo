@@ -25,6 +25,8 @@
 		363BB7EC1A25558100BF7574 /* PlayingCardGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 363BB7EB1A25558100BF7574 /* PlayingCardGameViewController.m */; };
 		363BB7EF1A25573D00BF7574 /* SetCarGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 363BB7EE1A25573D00BF7574 /* SetCarGameViewController.m */; };
 		365AA4191A235D37002F72F3 /* matchismo_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 365AA4181A235D37002F72F3 /* matchismo_Tests.m */; };
+		36A9ED811A35C9B500540CC9 /* SetCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A9ED7E1A35C9B500540CC9 /* SetCard.m */; };
+		36A9ED821A35C9B500540CC9 /* SetCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A9ED801A35C9B500540CC9 /* SetCardDeck.m */; };
 		36D24B231709D51300D1C4A3 /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D24B221709D51300D1C4A3 /* CardMatchingGame.m */; };
 		36ED39341A07A7B60060D6DB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36ED39331A07A7B60060D6DB /* Images.xcassets */; };
 		36EEB51E17221FDE00D42B2B /* cardBack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 36EEB51D17221FDE00D42B2B /* cardBack.jpg */; };
@@ -72,6 +74,10 @@
 		365AA4141A235D37002F72F3 /* matchismo Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "matchismo Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		365AA4171A235D37002F72F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		365AA4181A235D37002F72F3 /* matchismo_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = matchismo_Tests.m; sourceTree = "<group>"; };
+		36A9ED7D1A35C9B500540CC9 /* SetCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SetCard.h; path = Model/SetCard.h; sourceTree = "<group>"; };
+		36A9ED7E1A35C9B500540CC9 /* SetCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SetCard.m; path = Model/SetCard.m; sourceTree = "<group>"; };
+		36A9ED7F1A35C9B500540CC9 /* SetCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SetCardDeck.h; path = Model/SetCardDeck.h; sourceTree = "<group>"; };
+		36A9ED801A35C9B500540CC9 /* SetCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SetCardDeck.m; path = Model/SetCardDeck.m; sourceTree = "<group>"; };
 		36D24B211709D51300D1C4A3 /* CardMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardMatchingGame.h; path = Model/CardMatchingGame.h; sourceTree = "<group>"; };
 		36D24B221709D51300D1C4A3 /* CardMatchingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardMatchingGame.m; path = Model/CardMatchingGame.m; sourceTree = "<group>"; };
 		36ED39331A07A7B60060D6DB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -165,6 +171,10 @@
 		289393D51706944100DB7BD2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				36A9ED7D1A35C9B500540CC9 /* SetCard.h */,
+				36A9ED7E1A35C9B500540CC9 /* SetCard.m */,
+				36A9ED7F1A35C9B500540CC9 /* SetCardDeck.h */,
+				36A9ED801A35C9B500540CC9 /* SetCardDeck.m */,
 				36D24B211709D51300D1C4A3 /* CardMatchingGame.h */,
 				36D24B221709D51300D1C4A3 /* CardMatchingGame.m */,
 				289393C617035A2400DB7BD2 /* Deck.h */,
@@ -302,9 +312,11 @@
 				363BB7EF1A25573D00BF7574 /* SetCarGameViewController.m in Sources */,
 				289393C817035A2400DB7BD2 /* Deck.m in Sources */,
 				289393CB17035D8D00DB7BD2 /* Card.m in Sources */,
+				36A9ED811A35C9B500540CC9 /* SetCard.m in Sources */,
 				289393CE17035EB300DB7BD2 /* PlayingCard.m in Sources */,
 				289393D11704CBD900DB7BD2 /* PlayingCardDeck.m in Sources */,
 				289393D41705EA9300DB7BD2 /* CardGameViewController.m in Sources */,
+				36A9ED821A35C9B500540CC9 /* SetCardDeck.m in Sources */,
 				36D24B231709D51300D1C4A3 /* CardMatchingGame.m in Sources */,
 				363BB7EC1A25558100BF7574 /* PlayingCardGameViewController.m in Sources */,
 			);

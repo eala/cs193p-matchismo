@@ -8,6 +8,7 @@
 
 #import "PlayingCardGameViewController.h"
 #import "PlayingCardDeck.h"
+#import "CardMatchingGame.h"
 
 @interface PlayingCardGameViewController ()
 
@@ -27,7 +28,12 @@
 
 -(Deck *)createDeck
 {
+    //self.game.gameMode = 2;
     return [[PlayingCardDeck alloc] init];
+}
+
+-(NSUInteger)getGameMode{
+    return 2;
 }
 
 /*
