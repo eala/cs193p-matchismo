@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *operationLabel;
 
+@property (strong, nonatomic) NSMutableArray *history;
 @end
 
 @implementation CardGameViewController
@@ -29,7 +30,6 @@
     return 0;
 }
 
-
 -(CardMatchingGame *)game
 {
     if (!_game) {
@@ -38,6 +38,13 @@
         _game.gameMode = [self getGameMode];
     }
     return _game;
+}
+
+-(NSMutableArray *)history{
+    if (!_history) {
+        _history = [[NSMutableArray alloc]init];
+    }
+    return _history;
 }
 
 -(void)setCardButtons:(NSArray *)cardButtons

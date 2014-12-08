@@ -17,8 +17,8 @@
 #pragma mark - Card::contents
 -(NSString *)contents
 {
-    NSArray *numberString = [SetCard rankStrings];
-    return [NSString stringWithFormat:@"%@_%@_%@_%@", numberString[self.rank], self.symbol, self.shading, self.color];
+    return [NSString stringWithFormat:@"%@%@", [SetCard rankStrings][self.rank], self.symbol];
+    // use NSAttributedString to represent shading & color
 }
 
 #pragma mark rank
@@ -43,7 +43,8 @@
 #pragma mark symbol
 + (NSArray *)validSymbol
 {
-    return @[@"diamond", @"squiggle", @"oval"];
+    //return @[@"diamond", @"squiggle", @"oval"];
+    return @[@"▲", @"◼︎", @"●"];
 }
 
 -(void)setSymbol:(NSString *)symbol
@@ -94,5 +95,32 @@
     return _color? _color: @"?";
 }
 
+-(int)similarity:(SetCard *)anotherCard{
+    int score = 0;
+    const int SAME_RANK = 1;
+    const int SAME_COLOR = 2;
+    const int SAME_SADING = 4;
+    const int SAME_SYMBOL = 8;
+    if (self.rank == anotherCard.rank) score+= SAME_RANK;
+    if ([self.color isEqualToString: anotherCard.color]) score+= SAME_COLOR;
+    if ([self.shading isEqualToString: anotherCard.shading]) score+= SAME_SADING;
+    if ([self.symbol isEqualToString: anotherCard.symbol]) score+= SAME_SYMBOL;
+    return score;
+}
 
+-(int)match:(NSArray *)otherCards
+{
+    const int MATCHED_BONUS = 4;
+    int score = 0;
+    // directly consider 3 cards situation
+    if (otherCards.count==2){
+        SetCard *matchedCard = otherCards[0];
+        SetCard *matchingCard = otherCards[1];
+        if ([self similarity:matchedCard] == [self similarity:matchedCard]
+            && [self similarity:matchedCard] == [matchedCard similarity:matchingCard]){
+            score += MATCHED_BONUS;
+        }
+    }
+    return score;
+}
 @end
