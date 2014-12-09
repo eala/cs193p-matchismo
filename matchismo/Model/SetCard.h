@@ -20,10 +20,12 @@
 @property (nonatomic) NSInteger rank;
 @property (nonatomic, strong) NSString *symbol;
 @property (nonatomic, strong) NSString *shading;
-@property (nonatomic, strong) NSString *color;
+//@property (nonatomic, strong) NSString *color;
+@property (nonatomic, strong) UIColor *color;
 
 +(NSUInteger)maxRank;
 + (NSArray *)validSymbol;
 + (NSArray *)validShading;
+//+ (NSArray *)validColor;
 + (NSArray *)validColor;
 @end

@@ -8,6 +8,7 @@
 
 #import "SetCarGameViewController.h"
 #import "SetCardDeck.h"
+#import "SetCard.h"
 
 @interface SetCarGameViewController ()
 
@@ -17,6 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor greenColor];
     // Do any additional setup after loading the view.
 }
 
@@ -31,6 +34,26 @@
 
 -(NSUInteger)getGameMode{
     return 2;
+}
+
+-(void)drawCardButtonByCard: (SetCard *)card
+                       over: (UIButton *)button
+{
+    [button setTitle:@"" forState:UIControlStateNormal];
+    
+    NSMutableAttributedString *attributedStr = [[NSMutableAttributedString alloc]initWithString: [self titleForCard:card] attributes:
+                @{NSForegroundColorAttributeName: card.color, 
+                  //NSStrokeWidthAttributeName: [NSNumber numberWithFloat:3.0],
+                  NSStrokeWidthAttributeName: [NSNumber numberWithFloat:-3.0],
+                  NSStrokeColorAttributeName:[UIColor blueColor]}];
+
+    [button setAttributedTitle:attributedStr forState:UIControlStateNormal];
+    
+    if ([[UIColor purpleColor] isEqual:[UIColor purpleColor]]){
+        NSLog(@"purpleColor == purple color");
+    }else{
+        NSLog(@"purpleColor != purple color");
+    }
 }
 
 /*

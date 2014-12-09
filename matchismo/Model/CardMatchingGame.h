@@ -24,5 +24,8 @@
 
 @property (nonatomic, readonly, strong) NSString *flipResult;
 @property (nonatomic, readonly) int nFlipCount;
+
 @property (nonatomic) NSInteger gameMode;
+
+@property (strong, nonatomic) NSMutableArray *history;
 @end

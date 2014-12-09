@@ -11,13 +11,9 @@
 
 @interface CardGameViewController ()
 
-@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
-
-//@property (strong, nonatomic) IBOutlet UISegmentedControl *gameModeControl;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *operationLabel;
 
-@property (strong, nonatomic) NSMutableArray *history;
 @end
 
 @implementation CardGameViewController
@@ -40,13 +36,6 @@
     return _game;
 }
 
--(NSMutableArray *)history{
-    if (!_history) {
-        _history = [[NSMutableArray alloc]init];
-    }
-    return _history;
-}
-
 -(void)setCardButtons:(NSArray *)cardButtons
 {
     _cardButtons = cardButtons;
@@ -61,13 +50,22 @@
     return [UIImage imageNamed: card.isChosen? @"cardfront" : @"cardback"];
 }
 
+-(void)drawCardButtonByCard: (Card *)card
+                       over: (UIButton *)button
+{
+    [button setTitle:[self titleForCard:card] forState:UIControlStateNormal];
+}
+
+
 -(void)updateUI
 {
     for (UIButton *cardButton in self.cardButtons) {
+        
         Card* card=[self.game cardAtIndex:[self.cardButtons indexOfObject:cardButton]];
         
-        [cardButton setTitle:[self titleForCard:card] forState:UIControlStateNormal];
+        [self drawCardButtonByCard: card over:cardButton];
         [cardButton setBackgroundImage:[self backgroundImageForCard:card] forState:UIControlStateNormal];
+
         cardButton.enabled = !card.isMatched;
     }
     

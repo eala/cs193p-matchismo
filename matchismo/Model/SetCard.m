@@ -17,8 +17,13 @@
 #pragma mark - Card::contents
 -(NSString *)contents
 {
-    return [NSString stringWithFormat:@"%@%@", [SetCard rankStrings][self.rank], self.symbol];
+    NSMutableString *tempString = [[NSMutableString alloc] init];
+    for (int i=0; i<self.rank; ++i) {
+        [tempString appendString:self.symbol];
+    }
+    //return [NSString stringWithFormat:@"%@%@", [SetCard rankStrings][self.rank], self.symbol];
     // use NSAttributedString to represent shading & color
+    return [tempString copy];
 }
 
 #pragma mark rank
@@ -80,19 +85,19 @@
 #pragma mark color
 + (NSArray *)validColor
 {
-    return @[@"red", @"green", @"purple"];
+    return @[[UIColor redColor], [UIColor purpleColor], [UIColor greenColor]];
 }
 
--(void)setColor:(NSString *)color
+-(void)setColor:(UIColor *)color
 {
     if ( [[SetCard validColor] containsObject:color]) {
         _color = color;
     }
 }
 
--(NSString *)color
+-(UIColor *)color
 {
-    return _color? _color: @"?";
+    return _color? _color: [UIColor clearColor];
 }
 
 -(int)similarity:(SetCard *)anotherCard{
@@ -102,7 +107,7 @@
     const int SAME_SADING = 4;
     const int SAME_SYMBOL = 8;
     if (self.rank == anotherCard.rank) score+= SAME_RANK;
-    if ([self.color isEqualToString: anotherCard.color]) score+= SAME_COLOR;
+    if ([self.color isEqual: anotherCard.color]) score+= SAME_COLOR;
     if ([self.shading isEqualToString: anotherCard.shading]) score+= SAME_SADING;
     if ([self.symbol isEqualToString: anotherCard.symbol]) score+= SAME_SYMBOL;
     return score;

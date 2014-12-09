@@ -14,10 +14,14 @@
 @interface CardGameViewController : UIViewController
 
 @property (strong, nonatomic) CardMatchingGame *game;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 
 // public API
 -(Deck *)createDeck;
 -(NSUInteger)getGameMode;
+-(void)drawCardButtonByCard: (Card *)card
+                       over: (UIButton *)button;
 
 // protected
+-(NSString *)titleForCard: (Card *)card;
 @end

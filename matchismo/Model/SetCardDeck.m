@@ -19,7 +19,7 @@
         for (NSUInteger rank=1; rank <= [SetCard maxRank]; ++rank) {
             for (NSString *symbol in [SetCard validSymbol]) {
                 for (NSString *shading in [SetCard validShading]) {
-                    for (NSString *color in [SetCard validColor]) {
+                    for (UIColor *color in [SetCard validColor]) {
                         SetCard *card = [[SetCard alloc] init];
                         card.rank = rank;
                         card.symbol = symbol;

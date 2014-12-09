@@ -20,6 +20,13 @@
 
 @implementation CardMatchingGame
 
+-(NSMutableArray *)history{
+    if (!_history) {
+        _history = [[NSMutableArray alloc]init];
+    }
+    return _history;
+}
+
 -(NSMutableArray *)cards
 {
     if (!_cards) _cards = [[NSMutableArray alloc] init];
