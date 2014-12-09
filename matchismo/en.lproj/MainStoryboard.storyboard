@@ -334,6 +334,35 @@
                                     <action selector="touchCardButton:" destination="lHo-om-YYH" eventType="touchUpInside" id="2yC-j8-oYh"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Score: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ume-iv-l6x">
+                                <rect key="frame" x="19" y="414" width="208" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eDt-ga-30t">
+                                <rect key="frame" x="245" y="392" width="56" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Deal">
+                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="deal:" destination="lHo-om-YYH" eventType="touchUpInside" id="qMh-zr-p9C"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rSk-nc-HaA">
+                                <rect key="frame" x="19" y="366" width="284" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -345,6 +374,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="operationLabel" destination="rSk-nc-HaA" id="n2S-w8-eJu"/>
+                        <outlet property="scoreLabel" destination="ume-iv-l6x" id="aJc-rm-CHE"/>
                         <outletCollection property="cardButtons" destination="cky-Gp-484" id="TbU-4J-gJT"/>
                         <outletCollection property="cardButtons" destination="dRP-sQ-oSa" id="DNu-wK-UMv"/>
                         <outletCollection property="cardButtons" destination="uzS-SD-uSj" id="uY8-h1-gcV"/>
@@ -956,7 +987,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="operationLabel" destination="mRZ-82-jpm" id="AMc-4g-wdj"/>
-                        <outlet property="scoreLabel" destination="WaZ-U3-2RZ" id="r8W-sy-HCf"/>
+                        <outlet property="scoreLabel" destination="WaZ-U3-2RZ" id="SAt-T8-JtC"/>
                         <outletCollection property="cardButtons" destination="usd-xO-tYm" id="1be-y6-mvA"/>
                         <outletCollection property="cardButtons" destination="bJO-T5-zTk" id="pFA-XO-n0P"/>
                         <outletCollection property="cardButtons" destination="hTF-Ky-dVR" id="U2l-oG-2Xq"/>
@@ -1038,6 +1069,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="AEr-5p-lwu"/>
+        <segue reference="rBw-1P-YPo"/>
     </inferredMetricsTieBreakers>
 </document>
