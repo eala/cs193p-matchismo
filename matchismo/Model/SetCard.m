@@ -124,6 +124,9 @@
         if ([self similarity:matchedCard] == [self similarity:matchedCard]
             && [self similarity:matchedCard] == [matchedCard similarity:matchingCard]){
             score += MATCHED_BONUS;
+            self.lastMatchedResult = [NSString stringWithFormat:@"%@, %@, and %@ matched", self.contents, matchedCard.contents, matchingCard.contents];
+        }else{
+            self.lastMatchedResult = [NSString stringWithFormat:@"%@, %@, and %@ are not matched", self.contents, matchedCard.contents, matchingCard.contents];
         }
     }
     return score;

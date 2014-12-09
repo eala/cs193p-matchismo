@@ -28,6 +28,7 @@
 		36A9ED811A35C9B500540CC9 /* SetCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A9ED7E1A35C9B500540CC9 /* SetCard.m */; };
 		36A9ED821A35C9B500540CC9 /* SetCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A9ED801A35C9B500540CC9 /* SetCardDeck.m */; };
 		36D24B231709D51300D1C4A3 /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D24B221709D51300D1C4A3 /* CardMatchingGame.m */; };
+		36D829D41A37429F005649B3 /* HistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D829D31A37429F005649B3 /* HistoryTableViewController.m */; };
 		36ED39341A07A7B60060D6DB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36ED39331A07A7B60060D6DB /* Images.xcassets */; };
 		36EEB51E17221FDE00D42B2B /* cardBack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 36EEB51D17221FDE00D42B2B /* cardBack.jpg */; };
 /* End PBXBuildFile section */
@@ -80,6 +81,8 @@
 		36A9ED801A35C9B500540CC9 /* SetCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SetCardDeck.m; path = Model/SetCardDeck.m; sourceTree = "<group>"; };
 		36D24B211709D51300D1C4A3 /* CardMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardMatchingGame.h; path = Model/CardMatchingGame.h; sourceTree = "<group>"; };
 		36D24B221709D51300D1C4A3 /* CardMatchingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardMatchingGame.m; path = Model/CardMatchingGame.m; sourceTree = "<group>"; };
+		36D829D21A37429F005649B3 /* HistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryTableViewController.h; sourceTree = "<group>"; };
+		36D829D31A37429F005649B3 /* HistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryTableViewController.m; sourceTree = "<group>"; };
 		36ED39331A07A7B60060D6DB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		36EEB51D17221FDE00D42B2B /* cardBack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cardBack.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,6 +146,8 @@
 				363BB7EB1A25558100BF7574 /* PlayingCardGameViewController.m */,
 				363BB7ED1A25573D00BF7574 /* SetCarGameViewController.h */,
 				363BB7EE1A25573D00BF7574 /* SetCarGameViewController.m */,
+				36D829D21A37429F005649B3 /* HistoryTableViewController.h */,
+				36D829D31A37429F005649B3 /* HistoryTableViewController.m */,
 				289393D51706944100DB7BD2 /* Model */,
 				289393B2170359B700DB7BD2 /* TCWAppDelegate.h */,
 				289393B3170359B700DB7BD2 /* TCWAppDelegate.m */,
@@ -307,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36D829D41A37429F005649B3 /* HistoryTableViewController.m in Sources */,
 				289393B0170359B700DB7BD2 /* main.m in Sources */,
 				289393B4170359B700DB7BD2 /* TCWAppDelegate.m in Sources */,
 				363BB7EF1A25573D00BF7574 /* SetCarGameViewController.m in Sources */,

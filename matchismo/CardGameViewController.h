@@ -24,4 +24,5 @@
 
 // protected
 -(NSString *)titleForCard: (Card *)card;
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender;
 @end

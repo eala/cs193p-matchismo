@@ -117,5 +117,6 @@ static const int COST_TO_CHOOSE = 1;
         }
     }
     self.flipResult = [NSString stringWithFormat:@"%@", card.lastMatchedResult];
+    [self.history addObject: card.lastMatchedResult];
 }
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "CardGameViewController.h"
-
+#import "HistoryTableViewController.h"
 
 @interface CardGameViewController ()
 
@@ -95,5 +95,15 @@
         [self updateUI];
     }
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"ShowHistorySegue"]) {
+        HistoryTableViewController *historyVC = [segue destinationViewController];
+        historyVC.game = self.game;
+    }
+}
+
 
 @end

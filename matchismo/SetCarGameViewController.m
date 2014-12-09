@@ -48,12 +48,6 @@
                   NSStrokeColorAttributeName:[UIColor blueColor]}];
 
     [button setAttributedTitle:attributedStr forState:UIControlStateNormal];
-    
-    if ([[UIColor purpleColor] isEqual:[UIColor purpleColor]]){
-        NSLog(@"purpleColor == purple color");
-    }else{
-        NSLog(@"purpleColor != purple color");
-    }
 }
 
 /*
