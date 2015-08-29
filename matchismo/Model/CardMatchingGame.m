@@ -20,7 +20,8 @@
 
 @implementation CardMatchingGame
 
--(NSMutableArray *)history{
+-(NSMutableArray *)history
+{
     if (!_history) {
         _history = [[NSMutableArray alloc]init];
     }
@@ -33,7 +34,8 @@
     return _cards;
 }
 
--(NSMutableArray *)chosenCards{
+-(NSMutableArray *)chosenCards
+{
     if (!_chosenCards) {
         _chosenCards = [[NSMutableArray alloc] init];
     }
@@ -86,6 +88,7 @@ static const int COST_TO_CHOOSE = 1;
             card.chosen = NO;
             [self.chosenCards removeObject:card];
         }else{
+            card.chosen = YES;
             if ( self.gameMode == self.chosenCards.count){
                 // it means that this card is the last matching one
                 int matchedScore = [card match: self.chosenCards];
@@ -94,7 +97,6 @@ static const int COST_TO_CHOOSE = 1;
                     for (Card *otherCard in self.chosenCards){
                         otherCard.matched = YES;
                         card.matched = YES;
-                        otherCard.chosen = YES;  // in fact, it should have been done
                     }
                     [self.chosenCards removeAllObjects];
                 }else{
@@ -103,15 +105,12 @@ static const int COST_TO_CHOOSE = 1;
                         otherCard.chosen = NO;
                     }
                     [self.chosenCards removeAllObjects];
-                    self.score -= MISMATCH_PENALITY;
-                    
                     [self.chosenCards addObject:card];
+                    self.score -= MISMATCH_PENALITY;
                 }
-                card.chosen = YES;
             }else{
                 // general case, not arrive checking point
                 self.score -= COST_TO_CHOOSE;
-                card.chosen = YES;
                 [self.chosenCards addObject:card];
             }
         }
@@ -119,4 +118,5 @@ static const int COST_TO_CHOOSE = 1;
     self.flipResult = [NSString stringWithFormat:@"%@", card.lastMatchedResult];
     [self.history addObject: card.lastMatchedResult];
 }
+
 @end
