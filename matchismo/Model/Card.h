@@ -14,7 +14,7 @@
 
 @property (nonatomic, getter = isChosen) BOOL chosen;
 @property(nonatomic, getter = isMatched) BOOL matched;
-@property (strong, nonatomic) NSString *lastMatchedResult;
+@property (strong, nonatomic) NSString *operation;
 
 -(int) match: (NSArray *)otherCards;
 @end

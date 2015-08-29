@@ -11,33 +11,12 @@
 @implementation PlayingCard
 @synthesize suit = _suit;
 
-#pragma mark - SETTERS & GETTERS
--(NSString *)contents
-{
-    NSArray *rankStrings = [PlayingCard rankStrings];
-    return [rankStrings[self.rank] stringByAppendingString:self.suit];
-}
-
-#pragma mark suit
+#pragma mark - utilties
 + (NSArray *)validSuits
 {
     return @[@"♥", @"♦", @"♠", @"♣"];
 }
 
--(void)setSuit:(NSString *)suit
-{
-    if ([ [PlayingCard validSuits] containsObject:suit]) {
-        _suit = suit;
-    }
-}
-
-// important initialization, you can return init value here
--(NSString *)suit
-{
-    return _suit ? _suit : @"?";
-}
-
-#pragma mark rank
 +(NSArray *)rankStrings
 {
     return @[@"?", @"A", @"2", @"3",@"4", @"5", @"6", @"7", @"8", @"9", @"10", @"J", @"Q", @"K"];
@@ -48,27 +27,52 @@
     return [self rankStrings].count-1;
 }
 
+#pragma mark - setters & getters
+-(NSString *)contents
+{
+    NSArray *rankStrings = [PlayingCard rankStrings];
+    return [rankStrings[self.rank] stringByAppendingString:self.suit];
+}
+
+-(void)setSuit:(NSString *)suit
+{
+    if ([[PlayingCard validSuits] containsObject:suit]) {
+        _suit = suit;
+    }
+}
+
+-(NSString *)suit
+{
+    return _suit ? _suit : @"?";
+}
+
 -(void)setRank:(NSUInteger)rank
 {
-    // you could not use self since maxRank is static function
     if (rank <= [PlayingCard maxRank]) {
         _rank = rank;
     }
 }
 
+#pragma mark - functions
+const int SAME_SUIT_BONUS = 1;
+const int SAME_RANK_BONUS = 4;
+const int NOT_MATCH_PENALTY = -2;
 -(int)match:(NSArray *)otherCards
 {
     int score = 0;
-    if (otherCards.count==1) {
+    if ( 1 == otherCards.count) {
         PlayingCard *otherCard = [otherCards firstObject];
-        if ([otherCard.suit isEqualToString:self.suit]) {
-            score = 1;
-            self.lastMatchedResult = [[NSString alloc] initWithString: [NSString stringWithFormat:@"Matched %@ %@ for %d", otherCard.contents, self.contents, score]];
-        }else if (otherCard.rank == self.rank) {
-            score =4;
-            self.lastMatchedResult = [[NSString alloc] initWithString: [NSString stringWithFormat:@"Matched %@ %@ for %d", otherCard.contents, self.contents, score]];
+        if ([otherCard.suit isEqualToString:self.suit])
+            score += SAME_SUIT_BONUS;
+            
+        if (otherCard.rank == self.rank)
+            score += SAME_RANK_BONUS;
+        
+        if (score > 0){
+            self.operation = [NSString stringWithFormat:@"Matched %@ %@ for %d", otherCard.contents, self.contents, score];
         }else{
-            self.lastMatchedResult = [[NSString alloc] initWithString: [NSString stringWithFormat:@"%@ %@don't match!2 point penality ", otherCard.contents, self.contents]];
+            score += NOT_MATCH_PENALTY;
+            self.operation = [NSString stringWithFormat:@"%@ %@don't match!2 point penality ", otherCard.contents, self.contents];
         }
     }else{
         int tempScore = 0;
@@ -76,7 +80,7 @@
             PlayingCard *matchedCard = otherCards[i];
             tempScore = [self match:@[matchedCard]];
             if (tempScore > 0) {
-                self.lastMatchedResult = [NSString stringWithFormat:@"Matched %@ %@ for %d", matchedCard.contents, self.contents, tempScore];
+                self.operation = [NSString stringWithFormat:@"Matched %@ %@ for %d", matchedCard.contents, self.contents, tempScore];
                 score += tempScore;
             }
             
@@ -84,7 +88,7 @@
                 PlayingCard *matchingCard = otherCards[j];
                 tempScore = [matchedCard match:@[matchingCard]];
                 if (tempScore > 0) {
-                    self.lastMatchedResult = [NSString stringWithFormat:@"Matched %@ %@ for %d", matchedCard.contents, matchingCard.contents, tempScore];
+                    self.operation = [NSString stringWithFormat:@"Matched %@ %@ for %d", matchedCard.contents, matchingCard.contents, tempScore];
                     score += tempScore;
                 }
             }
@@ -92,7 +96,7 @@
         
         tempScore = [self match:@[otherCards[otherCards.count-1]]];
         if (tempScore > 0) {
-            self.lastMatchedResult = [NSString stringWithFormat:@"Matched %@ %@ for %d", self.contents, [otherCards[otherCards.count-1] contents], tempScore];
+            self.operation = [NSString stringWithFormat:@"Matched %@ %@ for %d", self.contents, [otherCards[otherCards.count-1] contents], tempScore];
             score += tempScore;
         }
         
@@ -100,9 +104,9 @@
         if (score < 0) {
             for (PlayingCard *otherCard in otherCards)
             {
-                self.lastMatchedResult = [NSString stringWithFormat:@"%@, %@", self.lastMatchedResult, otherCard.contents];
+                self.operation = [NSString stringWithFormat:@"%@, %@", self.operation, otherCard.contents];
             }
-            self.lastMatchedResult = [NSString stringWithFormat:@"%@, %@ don't match", self.lastMatchedResult, self.contents];
+            self.operation = [NSString stringWithFormat:@"%@, %@ don't match", self.operation, self.contents];
         }
     }
     return score;
